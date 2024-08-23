@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { TopmenuComponent } from '../topmenu/topmenu.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
-
+import { navigationRoutes } from '../../shared/localdata/navigationRoutes';
+import { MainRoute } from '../../shared/models/navigationRoutesModels';
 
 @Component({
   selector: 'app-leftmenu',
@@ -15,4 +16,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class LeftmenuComponent {
   leftmenuActive = true;
+  mainRoutes: MainRoute[] = navigationRoutes;
 }
