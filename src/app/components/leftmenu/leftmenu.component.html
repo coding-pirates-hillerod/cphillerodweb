@@ -1,27 +1,11 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" [opened]="leftmenuActive" layout-align="center" >
-
-      <a class="nav-button" mat-stroked-button >
-        <mat-icon aria-hidden="false" aria-label="home" fontIcon="home"></mat-icon>
-        <span class="left-nav-button-text">Forside</span>
+    @for (route of mainRoutes; track route.route) {
+      <a class="nav-button" mat-stroked-button [routerLink]="route.route">
+        <mat-icon aria-hidden="false" attr.aria-label="{{route.title}}" fontIcon="{{route.icon}}"></mat-icon>
+        <span class="left-nav-button-text">{{route.title}}</span>
       </a>
-      <a class="nav-button" mat-stroked-button >
-        <mat-icon aria-hidden="false" aria-label="about us" fontIcon="diversity_3"></mat-icon>
-        <span class="left-nav-button-text">Om os</span>
-      </a>
-      <a class="nav-button" mat-stroked-button >
-        <mat-icon aria-hidden="false" aria-label="activities" fontIcon="construction"></mat-icon>
-        <span class="left-nav-button-text">Aktiviteter</span>
-      </a>
-      <a class="nav-button" mat-stroked-button >
-        <mat-icon aria-hidden="false" aria-label="contact" fontIcon="contact_phone"></mat-icon>
-        <span class="left-nav-button-text">Kontakt</span>
-      </a>
-      <a class="nav-button" mat-stroked-button >
-        <mat-icon aria-hidden="false" aria-label="teams" fontIcon="groups"></mat-icon>
-        <span class="left-nav-button-text">Hold</span>
-      </a>
-
+    }
   </mat-drawer>
   <mat-drawer-content>
     <app-topmenu (setLeftmenuActive)="leftmenuActive=$event"></app-topmenu>
