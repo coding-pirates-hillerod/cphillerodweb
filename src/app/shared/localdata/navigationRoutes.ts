@@ -1,9 +1,9 @@
-import { NavigationRoute } from "../models/navigationRoutesModels";
+import { NavigationRoute } from '../models/navigationRoutesModels';
 
 export const navigationRoutes: NavigationRoute[] = [
   {
     title: 'Forside',
-    route: '',
+    route: 'forside',
     icon: 'home', // Home icon
     subRoutes: [
       { title: 'Bliv Frivillig', route: 'forside/bliv-frivillig' },

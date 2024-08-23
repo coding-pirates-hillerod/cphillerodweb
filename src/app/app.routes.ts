@@ -19,33 +19,53 @@ import { ContactFormComponent } from './view/public/contact/contact-form/contact
 import { ContactCvrInfoComponent } from './view/public/contact/contact-cvr-info/contact-cvr-info.component';
 
 export const routes: Routes = [
-  { path: '', component: HomepageComponent },
-  { path: 'forside/bliv-frivillig', component: VolunteerComponent },
-  { path: 'forside/funding', component: FundingComponent },
+  {
+    path: 'forside',
+    component: HomepageComponent,
+    children: [
+      { path: 'bliv-frivillig', component: VolunteerComponent },
+      { path: 'funding', component: FundingComponent },
+    ],
+  },
 
-  { path: 'om', component: AboutComponent, children: [
-    { path: 'historie', component: AboutHistoryComponent },
-    { path: 'team', component: AboutTeamComponent },
-    { path: 'mission', component: AboutMissionComponent },
-  ]},
+  {
+    path: 'om',
+    component: AboutComponent,
+    children: [
+      { path: 'historie', component: AboutHistoryComponent },
+      { path: 'team', component: AboutTeamComponent },
+      { path: 'mission', component: AboutMissionComponent },
+    ],
+  },
 
-  { path: 'hold', component: TeamsComponent, children: [
-    { path: 'oversigt', component: TeamOverviewComponent },
-    { path: 'tilmelding', component: TeamRegistrationComponent },
-    { path: 'kontakt', component: TeamContactComponent },
-    { path: 'tider', component: TeamDaysComponent },
-  ]},
+  {
+    path: 'hold',
+    component: TeamsComponent,
+    children: [
+      { path: 'oversigt', component: TeamOverviewComponent },
+      { path: 'tilmelding', component: TeamRegistrationComponent },
+      { path: 'kontakt', component: TeamContactComponent },
+      { path: 'tider', component: TeamDaysComponent },
+    ],
+  },
 
-  { path: 'aktiviteter', component: ActivitiesComponent, children: [
-    { path: 'kalender', component: ActivitiesCalendarComponent },
-    { path: 'hightlights', component: ActivitiesHighlightsComponent },
+  {
+    path: 'aktiviteter',
+    component: ActivitiesComponent,
+    children: [
+      { path: 'kalender', component: ActivitiesCalendarComponent },
+      { path: 'hightlights', component: ActivitiesHighlightsComponent },
+    ],
+  },
 
-  ]},
+  {
+    path: 'kontakt',
+    component: ContactComponent,
+    children: [
+      { path: 'kontaktformular', component: ContactFormComponent },
+      { path: 'lokation', component: ContactCvrInfoComponent },
+    ],
+  },
 
-  { path: 'kontakt', component: ContactComponent, children: [
-    { path: 'kontaktformular', component: ContactFormComponent },
-    { path: 'lokation', component: ContactCvrInfoComponent },
-  ]},
-
-  { path: '**', redirectTo: '' } // Fallback route
+  { path: '**', redirectTo: '' }, // Fallback route
 ];
