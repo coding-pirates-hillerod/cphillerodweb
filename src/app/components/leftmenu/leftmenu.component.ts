@@ -10,9 +10,17 @@ import { MainRoute } from '../../shared/models/navigationRoutesModels';
 @Component({
   selector: 'app-leftmenu',
   standalone: true,
-  imports: [MatSidenavModule, TopmenuComponent, MatIconModule, MatButtonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [
+    MatSidenavModule,
+    TopmenuComponent,
+    MatIconModule,
+    MatButtonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './leftmenu.component.html',
-  styleUrl: './leftmenu.component.scss'
+  styleUrl: './leftmenu.component.scss',
 })
 export class LeftmenuComponent {
   leftmenuActive = true;
