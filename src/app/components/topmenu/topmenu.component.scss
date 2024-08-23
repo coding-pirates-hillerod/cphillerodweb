@@ -1,0 +1,12 @@
+.nav-button-row-container{
+  width: 100%;
+
+  display: flex;
+
+  .nav-button {
+    flex: 1;
+  }
+  .leftmenu {
+    width: 50px;
+  }
+}
