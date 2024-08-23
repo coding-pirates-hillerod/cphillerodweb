@@ -1,8 +1,30 @@
 <mat-toolbar>
   <div class="nav-button-row-container">
     <a class="leftmenu" (click)="clickLeftmenuActive()" mat-stroked-button>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" [fontIcon]="leftMenuActiveStatus ? 'west' : 'east'"></mat-icon>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        [fontIcon]="leftMenuActiveStatus ? 'west' : 'east'"
+      ></mat-icon>
+    </a>
+    <a
+      routerLink="{{ currentSubRoutes[0].route }}"
+      routerLinkActive="router-link-active"
+      mat-stroked-button
+      class="topmenu-button"
+    >
+      <span class="left-nav-button-text">{{ currentSubRoutes[0].title }}</span>
     </a>
 
+    @for (route of currentSubRoutes[0].subRoutes; track route.title) {
+    <a
+      routerLink="{{ route.route }}"
+      routerLinkActive="router-link-active"
+      mat-stroked-button
+      class="topmenu-button"
+    >
+      <span class="left-nav-button-text">{{ route.title }}</span>
+    </a>
+    }
   </div>
 </mat-toolbar>

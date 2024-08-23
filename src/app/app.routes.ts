@@ -54,7 +54,7 @@ export const routes: Routes = [
     component: ActivitiesComponent,
     children: [
       { path: 'kalender', component: ActivitiesCalendarComponent },
-      { path: 'hightlights', component: ActivitiesHighlightsComponent },
+      { path: 'highlights', component: ActivitiesHighlightsComponent },
     ],
   },
 
