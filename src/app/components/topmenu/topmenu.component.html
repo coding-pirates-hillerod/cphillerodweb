@@ -1,5 +1,6 @@
 <mat-toolbar>
   <div class="nav-button-row-container">
+    <!-- Leftmenu toggle -->
     <a class="leftmenu" (click)="clickLeftmenuActive()" mat-stroked-button>
       <mat-icon
         aria-hidden="false"
@@ -7,24 +8,30 @@
         [fontIcon]="leftMenuActiveStatus ? 'west' : 'east'"
       ></mat-icon>
     </a>
+
+    <!-- Main component button, only shown if currentSubRoutes has elements -->
+    @if (currentSubRoutes.length > 0) {
     <a
-      routerLink="{{ currentSubRoutes[0].route }}"
+      [routerLink]="currentSubRoutes[0].route"
       routerLinkActive="router-link-active"
       mat-stroked-button
       class="topmenu-button"
     >
       <span class="left-nav-button-text">{{ currentSubRoutes[0].title }}</span>
     </a>
+    }
 
-    @for (route of currentSubRoutes[0].subRoutes; track route.title) {
+    <!-- Subroutes buttons using @for directive -->
+    @if (currentSubRoutes.length > 0 && currentSubRoutes[0].subRoutes) { @for
+    (route of currentSubRoutes[0].subRoutes; track route.title) {
     <a
-      routerLink="{{ route.route }}"
+      [routerLink]="route.route"
       routerLinkActive="router-link-active"
       mat-stroked-button
       class="topmenu-button"
     >
       <span class="left-nav-button-text">{{ route.title }}</span>
     </a>
-    }
+    } }
   </div>
 </mat-toolbar>

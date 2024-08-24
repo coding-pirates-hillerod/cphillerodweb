@@ -45,8 +45,7 @@ export const navigationRoutes: NavigationRoute[] = [
     subRoutes: [
       { title: 'Oversigt', route: 'hold/oversigt' },
       { title: 'Tilmelding', route: 'hold/tilmelding' },
-      { title: 'Kontakt', route: 'hold/kontakt' },
-      { title: 'Tider', route: 'hold/tider' },
+      { title: 'Håndbog', route: 'hold/haandbog' },
     ],
   },
 ];

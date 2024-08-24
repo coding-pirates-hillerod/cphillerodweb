@@ -1,0 +1,11 @@
+<div class="wrapper">
+  @for (item of handbookData; track item.id) {
+  <h1>{{ item.id }}. {{ item.title }}</h1>
+  <ul>
+    @for (sub of item.subsections; track sub.id) {
+    <h3>{{ sub.id }}. {{ sub.title }}</h3>
+    <li>{{ sub.text }}</li>
+    }
+  </ul>
+  }
+</div>

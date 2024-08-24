@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: scroll;
+
+    li {
+        max-width: 300px;
+    }
+}

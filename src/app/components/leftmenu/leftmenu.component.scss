@@ -1,10 +1,11 @@
 :host{
-  height: 100%;
 
 
 }
 mat-drawer-container {
   height: 100%;
+  max-height: 100%;
+
 }
 mat-drawer {
   width: 300px;
@@ -32,7 +33,7 @@ mat-drawer {
 
 }
 .custom-container {
-  height: 100%;
+  max-height: 100%;
   padding-left: 10px;
   overflow: hidden;
 }
