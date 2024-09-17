@@ -17,7 +17,7 @@ import { NavigationRoute } from '../../shared/models/navigationRoutesModels';
 export class TopmenuComponent implements OnDestroy {
   @Output() setLeftmenuActive = new EventEmitter<boolean>();
 
-  leftMenuActiveStatus = false;
+  leftMenuActiveStatus = true;
   routeSubscription: Subscription;
   currentRoute?: string;
   navigationRoutes: NavigationRoute[] = navigationRoutes;

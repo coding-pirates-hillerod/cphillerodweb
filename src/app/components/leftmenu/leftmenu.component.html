@@ -14,7 +14,9 @@
   <mat-drawer-content>
     <app-topmenu (setLeftmenuActive)="leftmenuActive = $event"></app-topmenu>
     <div class="custom-container">
-      <router-outlet />
+      <div class="inner-container">
+        <router-outlet />
+      </div>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
