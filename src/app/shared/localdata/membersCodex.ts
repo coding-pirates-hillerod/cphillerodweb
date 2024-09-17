@@ -7,7 +7,7 @@ export const membersCodex: HandbookSection[] = [
     subsections: [
       {
         title: 'Alder og Deltagelse',
-        text: 'Denne klub er for unge i alderen 13 til 17 år. Som medlem forventes det, at du deltager aktivt i vores møder og workshops.',
+        text: 'Denne klub er for unge i alderen 7 til 17 år. Som medlem forventes det, at du deltager aktivt i vores møder og workshops.',
         id: '1.1',
       },
       {

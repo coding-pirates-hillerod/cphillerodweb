@@ -45,11 +45,6 @@ export const routes: Routes = [
   { path: 'kontakt/kontaktformular', component: ContactFormComponent },
   { path: 'kontakt/lokation', component: ContactCvrInfoComponent },
 
-  // Handbook and its sub-routes as standalone routes
-  { path: 'haandbog', component: ContactComponent },
-  { path: 'kontakt/kontaktformular', component: ContactFormComponent },
-  { path: 'kontakt/lokation', component: ContactCvrInfoComponent },
-
   // Fallback route
   { path: '**', redirectTo: 'forside' }, // Redirects any unknown paths to 'forside'
 ];

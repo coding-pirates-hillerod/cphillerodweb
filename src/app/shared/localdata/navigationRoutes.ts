@@ -43,7 +43,6 @@ export const navigationRoutes: NavigationRoute[] = [
     route: 'hold',
     icon: 'groups', // Groups icon
     subRoutes: [
-      { title: 'Oversigt', route: 'hold/oversigt' },
       { title: 'Tilmelding', route: 'hold/tilmelding' },
       { title: 'Håndbog', route: 'hold/haandbog' },
     ],
