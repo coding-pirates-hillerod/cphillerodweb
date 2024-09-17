@@ -1,0 +1,12 @@
+.formand-info {
+  display: flex;
+  flex-direction: column;
+
+  * {
+    color: white;
+
+    a {
+      color: lightblue;
+    }
+  }
+}

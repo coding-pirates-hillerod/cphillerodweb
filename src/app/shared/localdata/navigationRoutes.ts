@@ -25,8 +25,8 @@ export const navigationRoutes: NavigationRoute[] = [
     route: 'aktiviteter',
     icon: 'event', // Event icon
     subRoutes: [
-      { title: 'Kalender', route: 'aktiviteter/kalender' },
-      { title: 'Highlights', route: 'aktiviteter/highlights' },
+      // { title: 'Kalender', route: 'aktiviteter/kalender' },
+      // { title: 'Highlights', route: 'aktiviteter/highlights' },
     ],
   },
   {
